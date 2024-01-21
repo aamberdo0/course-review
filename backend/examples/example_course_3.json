@@ -1,0 +1,38 @@
+{
+  "course_code": "ECO100",
+  "course_title": "Principles of Economics",
+  "location": "St George, University of Toronto",
+  "description": "An introduction to economic analysis and its applications: price determination; the role of competition; international trade and finance; the theory of production and employment; the role of money and the banking system; monetary and fiscal policy.",
+  "evaluation": {
+    "Warm-up": 2,
+    "Test 1": 12,
+    "Midterm": 24,
+    "Test 2": 12,
+    "Final Exam": 50
+  },
+  "workload": {
+    "reading": 100,
+    "writing": 30,
+    "presentation": 10
+  },
+  "reviews": [
+    {
+      "name": "Jimmy",
+      "rating": 1.5,
+      "major": "Economics",
+      "year": 1,
+      "review": "Pariatur et qui culpa ex laborum id id laborum dolor pariatur.",
+      "upvote": 0,
+      "downvote": 8
+    },
+    {
+      "name": "Adam",
+      "rating": 3.5,
+      "major": "Commerce",
+      "year": 2,
+      "review": "Tempor quis consectetur adipisicing veniam est nisi do aliquip quis irure in ad magna anim incididunt.",
+      "upvote": 4,
+      "downvote": 2
+    }
+  ]
+}

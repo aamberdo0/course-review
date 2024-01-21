@@ -1,0 +1,36 @@
+{
+  "course_code": "CSC265",
+  "course_title": "Enriched Data Structures",
+  "location": "St George, University of Toronto",
+  "description": "An introduction to economic analysis and its applications: price determination; the role of competition; international trade and finance; the theory of production and employment; the role of money and the banking system; monetary and fiscal policy.",
+  "evaluation": {
+    "Homework": 50,
+    "Midterm": 15,
+    "Final": 35
+  },
+  "workload": {
+    "reading": 50,
+    "writing": 90,
+    "presentation": 0
+  },
+  "reviews": [
+    {
+      "name": "Cors",
+      "rating": 1.0,
+      "major": "Computer Science",
+      "year": 2,
+      "review": "Consequat nostrud ea deserunt elit nulla non proident in esse sint reprehenderit excepteur fugiat pariatur do.",
+      "upvote": 0,
+      "downvote": 0
+    },
+    {
+      "name": "Buble",
+      "rating": 2.5,
+      "major": "Undeclared",
+      "year": 3,
+      "review": "Eu aute sint est id exercitation excepteur id cillum sit voluptate velit cillum ipsum.",
+      "upvote": 3,
+      "downvote": 2
+    }
+  ]
+}
