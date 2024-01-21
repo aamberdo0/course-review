@@ -4,7 +4,7 @@
         <ul><li><a href="#">CourSavvy</a></li></ul>
     </div>
 </div>
-<div class="logo"><img src="assets/logo/logo2.png" alt="logo_image" width="132" height="132"></div>
+<div class="logo"><img src="../../assets/logo/logo2.png" alt="logo_image" width="132" height="132"></div>
 
 <h3>Dive into the world of courses with our <br> user-friendly search engine</h3>
 <h1> Find my course</h1>
@@ -14,7 +14,7 @@
             <mat-icon>search</mat-icon>
         </button>
     <form [formGroup]="searchForm" class="searchBar" (ngSubmit)="onSearchSubmit()">
-        <input class="search-control" type="text" placeholder="Search by course" 
+        <input class="search-control" type="text" placeholder="Search by course"
          formControlName="searchValue">
     </form>
     </div>
@@ -22,10 +22,10 @@
     <div class="display" *ngFor="let data of searchResult">
         <p class="title">{{data.course_title}}</p>
         <p class="school">{{data.campus}}</p>
-    </div>    
+    </div>
    </div>
 
- 
+
 </div>
 <a href="/">I’d like to search by school</a>
 <div class="button-container">
