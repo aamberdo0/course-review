@@ -1,0 +1,54 @@
+
+<body>
+<h1>{{courseDetails.location}}</h1>
+<div class="heading">
+    <h2>{{courseDetails.course_title}}</h2>
+    <h2>{{courseDetails.course_code}}</h2>
+</div>
+<div class="summary">
+    <h4>Offered at: {{courseDetails.location}}</h4>
+    <h4>Academic Advisor: Louis Solovon</h4>
+    <h4>Program Coordinator(s): Sarah Sinclair</h4>
+    <p class="description">{{courseDetails.description}}</p>
+</div>
+<hr>
+<h3 id="text">
+    <span (click)="toggleEvaluationVisibility()">Evaluation [{{ isEvaluationVisible ? 'hide' : 'show' }}]</span></h3>
+  <div  *ngIf="isEvaluationVisible">
+    <div class="evaluation" *ngFor="let item of evaluation | keyvalue">
+    <h3>{{item.key}}</h3>
+    <h3>{{item.value}}</h3>
+    </div>
+</div>
+<hr>
+<h3 id="text">
+    <span (click)="toggleEvaluationVisibility()">Workload [{{ isEvaluationVisible ? 'hide' : 'show' }}]
+    </span>
+    </h3>
+<div  *ngIf="isEvaluationVisible">
+    <div class="evaluation" *ngFor="let marks of workload | keyvalue">
+    <h3>{{marks.key}}</h3>
+    <h3>{{marks.value}}</h3>
+</div>
+</div>
+<hr>
+<h2>How much did learners like this course?</h2>
+<div class="review" *ngFor="let review of reviews">
+    <h3>Reviewer: {{review.name}} ({{review.major}}, Year {{review.year}})</h3>
+    <p>Rating: {{review.rating}}</p>
+    <p>Review: {{review.review}}</p>
+    <div class="thumbs-section">
+        <div class="thumbs-up" (click)="handleThumbsUp(review)">
+          👍
+          <span>{{ review.upvote }}</span>
+        </div>
+        <div class="thumbs-down" (click)="handleThumbsDown(review)"
+        [class.disabled]="review.downvote < 0">
+          👎
+          <span>{{ review.downvote }}</span>
+        </div>
+      </div>
+    <hr>
+</div>
+
+</body>

@@ -18,7 +18,10 @@ h1 {
     width: 100%;
     margin-right:30px;
   }
-  
+  .display{
+    display: flex;
+    flex-direction: column;
+  }
   .search-control {
     border: 1px solid grey;
     text-indent: 33px;
@@ -26,15 +29,29 @@ h1 {
     padding: 12px;
     border-radius:20px;
   }
+  .title{
+    margin:0;
+    padding:0px 10px;
+  }
+  .school{
+    padding-left:20px;
+  }
+  .small-container{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+  }
   a{
     text-decoration: none;
     color:black;
     font-weight: bold;
    text-align: center;
    display: block;
-   padding-top:20px;
    font-size: 1rem;
-   
+
+  }
+  .school-search{
+    padding-top:20px;
   }
   .search-icon {
     border: none;
@@ -76,7 +93,6 @@ h1 {
     padding:15px 0px;
     width:400px;
     margin:20px auto 0px auto;
-    text-align: center;
   }
   button.icon{
     border:none;

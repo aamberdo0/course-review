@@ -11,14 +11,15 @@
     </div>
    <div class="second-element">
     <div class="display" *ngFor="let data of searchResult">
-        <p class="title">{{data.course_title}}</p>
-        <p class="school">{{data.campus}}</p>
+        <h3 class="title">{{data.course_title}}</h3>
+        <div class="small-container">
+        <p class="school">{{data.location}}</p>
+        <a href="" [routerLink]="['/details',data.course_code]">Course Info</a>
+    </div>
     </div>    
    </div>
-
- 
 </div>
-<a href="/">I’d like to search by school</a>
+<a class="school-search" href="/">I’d like to search by school</a>
 <div class="button-container">
     <div class="icon-pack">
         <div class="icon-border">

@@ -1,4 +1,5 @@
 export class Result {
     course_title!:string;
-    campus!:string;
+    location!:string;
+    course_code!:string;
 }

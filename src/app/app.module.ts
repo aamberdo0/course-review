@@ -11,12 +11,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
+import { DetailsComponent } from './details/details.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    DetailsComponent,
+    MainNavComponent,
 
   ],
   imports: [
