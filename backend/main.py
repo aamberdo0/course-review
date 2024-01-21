@@ -21,7 +21,7 @@ app.add_middleware(
 
 class Search(BaseModel):
   query: str
-  school: str
+  school: Optional[str] = None
 
 
 class Course(BaseModel):
@@ -50,7 +50,7 @@ async def root():
   return {"message": "Hello World"}
 
 
-@app.get("/search")
+@app.post("/search")
 async def search_complete(search_obj: Search):
   return {"response": query_complete(search_obj.query, search_obj.school)}
 
