@@ -1,3 +1,12 @@
+<div class="navigation_bar">
+    <div id="navigation_container">
+        <img src="assets/logo/logo.png"  alt="logo" width="50" height="50">
+        <ul><li><a href="#">CourSavvy</a></li></ul>
+    </div>
+</div>
+<div class="logo"><img src="assets/logo/logo2.png" alt="logo_image" width="132" height="132"></div>
+
+<h3>Dive into the world of courses with our <br> user-friendly search engine</h3>
 <h1> Find my course</h1>
 <div class="search">
     <div class="first-element">
@@ -5,7 +14,7 @@
             <mat-icon>search</mat-icon>
         </button>
     <form [formGroup]="searchForm" class="searchBar" (ngSubmit)="onSearchSubmit()">
-        <input class="search-control" type="text" placeholder="search value" 
+        <input class="search-control" type="text" placeholder="Search by course" 
          formControlName="searchValue">
     </form>
     </div>
