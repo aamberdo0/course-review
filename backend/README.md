@@ -40,7 +40,7 @@ Create a `.env` file with the MongoDB connection string inside.
 MONGO_URI=<MONGO_URI>
 ```
 ### Docker
-Run `docker run -p 8000:8000 --env-file ./.env --platform linux/amd64 -d jamesliangg/<CONTAINER_NAME>:<VERSION>` in the folder with the `.env file.
+Run `docker run -p 8000:8000 --env-file ./.env --platform linux/amd64 -d jamesliangg/<CONTAINER_NAME>:<VERSION>` in the folder with the `.env` file.
 ### Localhost
 Run `pip install -r requirements.txt` in this folder.
 
