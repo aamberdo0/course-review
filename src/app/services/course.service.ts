@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CourseService {
-  private api = 'http://0.0.0.0:8000/search';
+  private api = 'https://hackville-backend.onrender.com/search';
 
   constructor(private http: HttpClient) {}
 
