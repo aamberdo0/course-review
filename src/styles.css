@@ -1,4 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 900px;
+  padding:0;
+  /* margin-bottom: 20px; */
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(82,184,161,0.16430322128851538) 79%, rgba(2,62,138,0.20351890756302526) 98%);
+}
+  body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.navigation_bar {
+  padding: 40px;
+  margin: 0px;
+  text-align: left;
+  display:inline-block;
+  vertical-align:top;
+  width: 100%;
+}
+
+.navigation_bar ul {
+  padding: 10px;
+  margin: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo {
+  text-align: center;
+  padding: 10px;
+}
+
+
