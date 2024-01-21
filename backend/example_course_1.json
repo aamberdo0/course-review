@@ -1,0 +1,37 @@
+{
+  "course_code": "EECS 3461",
+  "course_title": "User Interfaces",
+  "location": "Keele, York University",
+  "description": "This course introduces the concepts and technology necessary to design, manage and implement user interfaces UIs. Users are increasingly more critical towards poorly designed interfaces. Consequently, for almost all applications more than half of the development effort is spent on the user interface.",
+  "evaluation": {
+    "Assignments": 30,
+    "Project": 20,
+    "Midterm Test": 20,
+    "Final Exam": 30
+  },
+  "workload": {
+    "reading": 100,
+    "writing": 40,
+    "presentation": 50
+  },
+  "reviews": [
+    {
+      "name": "Alex",
+      "rating": 4.5,
+      "major": "Psychology",
+      "year": 2,
+      "review": "Proident et reprehenderit consectetur magna anim et culpa esse aliquip deserunt sint exercitation incididunt.",
+      "upvote": 2,
+      "downvote": 0
+    },
+    {
+      "name": "Sarah",
+      "rating": 2.5,
+      "major": "Political Science",
+      "year": 4,
+      "review": "Aliqua dolor qui enim magna tempor et elit magna nulla anim nostrud.",
+      "upvote": 6,
+      "downvote": 2
+    }
+  ]
+}

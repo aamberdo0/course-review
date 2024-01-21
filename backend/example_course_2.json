@@ -1,0 +1,36 @@
+{
+  "course_code": "EECS 2011",
+  "course_title": "Fundamentals of Data Structures",
+  "location": "Keele, York University",
+  "description": "This course discusses the fundamental data structures commonly used in the design of algorithms. At the end of this course, students will know the classical data structures, and master the use of abstraction, specification and program construction using modules.",
+  "evaluation": {
+    "Assignments": 15,
+    "Midterm Test": 30,
+    "Final Exam": 55
+  },
+  "workload": {
+    "reading": 20,
+    "writing": 80,
+    "presentation": 30
+  },
+  "reviews": [
+    {
+      "name": "Bob",
+      "rating": 1.3,
+      "major": "Computer Science",
+      "year": 3,
+      "review": "Amet mollit eiusmod irure excepteur dolore proident anim sint cillum in non irure cillum laboris ex.",
+      "upvote": 1,
+      "downvote": 0
+    },
+    {
+      "name": "Sheridan",
+      "rating": 3.8,
+      "major": "Computer Engineering",
+      "year": 2,
+      "review": "Exercitation reprehenderit officia aute consequat ullamco esse ex amet quis ad eiusmod nulla aute.",
+      "upvote": 0,
+      "downvote": 0
+    }
+  ]
+}
