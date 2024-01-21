@@ -1,0 +1,56 @@
+<h1> Find my course</h1>
+<div class="search">
+    <div class="first-element">
+        <button type="submit" class="search-icon" mat-icon-button disabled>
+            <mat-icon>search</mat-icon>
+        </button>
+    <form [formGroup]="searchForm" class="searchBar" (ngSubmit)="onSearchSubmit()">
+        <input class="search-control" type="text" placeholder="search value" 
+         formControlName="searchValue">
+    </form>
+    </div>
+   <div class="second-element">
+    <div class="display" *ngFor="let data of searchResult">
+        <p class="title">{{data.course_title}}</p>
+        <p class="school">{{data.campus}}</p>
+    </div>    
+   </div>
+
+ 
+</div>
+<a href="/">I’d like to search by school</a>
+<div class="button-container">
+    <div class="icon-pack">
+        <div class="icon-border">
+            <button class="icon" mat-icon-button disabled>
+                <mat-icon>book</mat-icon>
+            </button>
+        </div>
+        <h2>Course <br> Description</h2>
+    </div>
+    <div class="icon-pack">
+        <div class="icon-border">
+            <button class="icon" mat-icon-button disabled>
+                <mat-icon>list</mat-icon>
+            </button>
+        </div>
+        <h2>Required <br> Textbooks</h2>
+    </div>
+    <div class="icon-pack">
+        <div class="icon-border">
+            <button class="icon" mat-icon-button disabled>
+                <mat-icon>person</mat-icon>
+            </button>
+        </div>
+        <h2>Connect with  <br> Alumni</h2>
+    </div>
+    <div class="icon-pack">
+        <div class="icon-border">
+            <button class="icon" mat-icon-button disabled>
+                <mat-icon>rate_review</mat-icon>
+            </button>
+        </div>
+        <h2>Course <br> Reviews</h2>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+{
+    "Course": {
+        "icon": "📘",
+        "result": [
+            {
+                "name": "Computer Science",
+                "university": "Example University",
+                "infoLink": "/courses/computer-science"
+            },
+            {
+                "name": "Mathematics",
+                "university": "Sample College",
+                "infoLink": "/courses/mathematics"
+            },
+            {
+                "name": "Math Statics",
+                "university": "Sheridan College",
+                "infoLink": "/courses/mathematics"
+            },
+            {
+                "name": "Art History",
+                "university": "Art Institute",
+                "infoLink": "/courses/art-history"
+            }
+        ]
+    }
+}
