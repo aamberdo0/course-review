@@ -72,7 +72,7 @@ async def course_update(course_obj: Course):
             "course_code": course_obj.course_code,
             "course_title": course_obj.course_title,
             "location": course_obj.location,
-            "description": course_obj.review,
+            "description": course_obj.description,
             "evaluation": course_obj.evaluation,
             "workload": course_obj.workload
         }

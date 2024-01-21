@@ -42,4 +42,4 @@ def query_complete(query, location):
 
 
 if __name__ == "__main__":
-    query_complete("Economics")
+    query_complete("Economics", "York University")
