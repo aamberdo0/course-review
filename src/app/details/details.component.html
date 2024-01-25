@@ -1,5 +1,9 @@
 <body>
-    <h1>{{courseDetails.location}}</h1>
+    <div class="main">
+        <h1 class="location">{{courseDetails.location}}</h1>
+        <span class="return" (click)="return()">×</span>
+    </div>
+   
     <div class="heading">
         <h2>{{courseDetails.course_title}}</h2>
         <h2>{{courseDetails.course_code}}</h2>
@@ -12,41 +16,45 @@
     </div>
     <hr>
     <h3 id="text">
-        <span (click)="toggleEvaluationVisibility()">Evaluation [{{ isEvaluationVisible ? 'hide' : 'show' }}]</span></h3>
+        <h2 (click)="toggleEvaluationVisibility()">Evaluation [{{ isEvaluationVisible ? 'hide' : 'show' }}]</h2></h3>
       <div  *ngIf="isEvaluationVisible">
         <div class="evaluation" *ngFor="let item of evaluation | keyvalue">
         <h3>{{item.key}}</h3>
-        <h3>{{item.value}}</h3>
+        <h3>{{item.value}}%</h3>
         </div>
     </div>
     <hr>
     <h3 id="text">
-        <span (click)="toggleEvaluationVisibility()">Workload [{{ isEvaluationVisible ? 'hide' : 'show' }}]
-        </span>
+        <h2 (click)="toggleWorkloadVisibility()">Workload [{{ isWorkload ? 'hide' : 'show' }}]
+        </h2>
         </h3>
-    <div  *ngIf="isEvaluationVisible">
+    <div  *ngIf="isWorkload">
         <div class="evaluation" *ngFor="let marks of workload | keyvalue">
         <h3>{{marks.key}}</h3>
-        <h3>{{marks.value}}</h3>
+        <h3>{{marks.value}}%</h3>
     </div>
     </div>
     <hr>
     <h2>How much did learners like this course?</h2>
     <div class="review" *ngFor="let review of reviews">
-        <h3>Reviewer: {{review.name}} ({{review.major}}, Year {{review.year}})</h3>
-        <p>Rating: {{review.rating}}</p>
+        <h3 class="reviewer">Reviewer: {{review.name}} ({{review.major}}, Year {{review.year}})</h3>
+        <p>Rating: {{ this.upvote }}</p>
         <p>Review: {{review.review}}</p>
         <div class="thumbs-section">
-            <div class="thumbs-up" (click)="handleThumbsUp(review)">
-              👍
-              <span>{{ review.upvote }}</span>
+            <span>Was this helpful</span>
+            <div class="thumbs">
+                <div class="thumbs-up" (click)="handleThumbsUp(review)">
+                    👍
+                    <span id="upvote">{{ review.upvote }}</span>
+                </div>
+                <div class="thumbs-down" (click)="handleThumbsDown(review)"
+                  [class.disabled]="review.downvote < 0">
+                    👎
+                    <span id="downvote">{{ review.downvote }}</span>
+                </div>
             </div>
-            <div class="thumbs-down" (click)="handleThumbsDown(review)"
-            [class.disabled]="review.downvote < 0">
-              👎
-              <span>{{ review.downvote }}</span>
-            </div>
-          </div>
+        </div>
+           
         <hr>
     </div>
     

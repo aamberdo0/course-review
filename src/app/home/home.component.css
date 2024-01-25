@@ -90,16 +90,17 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   gap: 4.5rem;
-  width: 100%
+  width: 100%;
+  padding-top:15px;
 }
 
 .icon-pack {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #EBF2FA;
   padding: 5px 10px;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 1px solid WHITE;
 
 }
 
@@ -127,7 +128,7 @@ ul li {
 button.icon {
   padding: 0px;
   border: none;
-  background-color: white;
+  background-color: #EBF2FA;
 
 }
 
@@ -160,7 +161,7 @@ button.icon mat-icon {
 
 }
 
-@media (max-width: 845px) {
+@media (max-width: 860px) {
   .button-container {
     gap: 0px;
 
