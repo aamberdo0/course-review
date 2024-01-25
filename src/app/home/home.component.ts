@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { Result } from '../../assets/models/result';
 import { CourseService } from '../services/course.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,13 @@ import { CourseService } from '../services/course.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  @Output() buttonClicked = new EventEmitter<string>();
   searchForm!: FormGroup;
   searchResult: Result[] = [];
   constructor(private fb: FormBuilder,
     private courseService:CourseService,
-     private http: HttpClient) {}
+     private http: HttpClient,
+     private router:Router) {}
 
   ngOnInit(): void {
     this.searchForm = this.fb.group({
@@ -38,15 +41,15 @@ export class HomeComponent implements OnInit {
     const searchValue = this.searchForm.value.searchValue;
     this.courseService.getSearch(searchValue).subscribe((data:any)=>{
       this.searchResult = data.response;
-      
       console.log(this.searchResult);
     },(error) => {
       console.error('Error fetching data:', error);
-      // Handle the error or log it for further investigation
     });
   }
-  displayFn(result: Result): string {
-    return result ? result.course_title : '';
+  onClicked(code:string){
+    this.buttonClicked.emit(code);
+    console.log(code);
+    this.router.navigate(['/details'], { state: { courseCode: code } });
   }
   onSearchSubmit(): void {
     this.fetchData();

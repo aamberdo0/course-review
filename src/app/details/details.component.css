@@ -1,0 +1,53 @@
+.evaluation,.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+body{
+    padding:30px;
+}
+.description{
+    margin:0px 40px 0px 0px;
+}
+h1{
+    font-weight: bolder;
+    font-size:22px;
+}
+#text{
+    font-weight: bold;
+    font-size:20px;
+}
+.thumbs-section {
+    display: flex;
+    
+  }
+  
+  .thumbs-up,
+  .thumbs-down {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #68d391; /* Green for thumbs-up */
+    color: #fff;
+    width:100px;
+    font-size:18px;
+  }
+  
+  .thumbs-down {
+    background-color: #fc8181; /* Red for thumbs-down */
+  }
+  
+  .thumbs-up:hover,
+  .thumbs-down:hover {
+    filter: brightness(1.2); /* Slightly increase brightness on hover */
+  }
+  
+  span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

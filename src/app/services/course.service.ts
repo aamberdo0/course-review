@@ -21,5 +21,16 @@ export class CourseService {
     const body = JSON.stringify({ query: searchValue }); // format the body as a JSON object
     return this.http.post<Result[]>(apiUrl, body, httpOptions);
   }
+  getCourse(query: string, courseCode: string): Observable<any> {
+    const apiUrl = this.api; // use the base API url
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    const body = JSON.stringify({ query, course_code: courseCode }); // format the body as a JSON object
+    return this.http.post<any>(apiUrl, body, httpOptions);
+  }
+  
 
 }

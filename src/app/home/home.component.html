@@ -1,10 +1,11 @@
 <div class="navigation_bar">
-    <div id="navigation_container">
         <img src="assets/logo/logo.png"  alt="logo" width="50" height="50">
         <ul><li><a href="#">CourSavvy</a></li></ul>
-    </div>
+
 </div>
-<div class="logo"><img src="../../assets/logo/logo2.png" alt="logo_image" width="132" height="132"></div>
+<div class="logo">
+    <img  src="../../assets/logo/logo2.png" alt="logo_image" width="132" height="132">
+</div>
 
 <h3>Dive into the world of courses with our <br> user-friendly search engine</h3>
 <h1> Find my course</h1>
@@ -13,21 +14,26 @@
         <button type="submit" class="search-icon" mat-icon-button disabled>
             <mat-icon>search</mat-icon>
         </button>
-    <form [formGroup]="searchForm" class="searchBar" (ngSubmit)="onSearchSubmit()">
-        <input class="search-control" type="text" placeholder="Search by course"
-         formControlName="searchValue">
-    </form>
+        <form [formGroup]="searchForm" class="searchBar" (ngSubmit)="onSearchSubmit()">
+            <input class="search-control" type="text" placeholder="Search by course" formControlName="searchValue">
+        </form>
     </div>
-   <div class="second-element">
-    <div class="display" *ngFor="let data of searchResult">
-        <p class="title">{{data.course_title}}</p>
-        <p class="school">{{data.campus}}</p>
+    
+    <div class="second-element" *ngIf="searchResult.length > 0">
+        <div class="display" *ngFor="let data of searchResult">
+            <h3 class="title">{{data.course_title}}</h3>
+            <div class="small-container">
+                <p class="school">{{data.location}}</p>
+                <a class="info-course" href="" [routerLink]="['/details', data.course_code]">Course Info</a>
+            </div>
+        </div>
     </div>
-   </div>
-
-
+    <div *ngIf="searchResult.length === 0 && searchForm.value.searchValue !== ''">
+        <p>No results found</p>
+    </div>
+    
 </div>
-<a href="/">I’d like to search by school</a>
+<a class ="school-search" href="/">I’d like to search by school</a>
 <div class="button-container">
     <div class="icon-pack">
         <div class="icon-border">
@@ -35,7 +41,7 @@
                 <mat-icon>book</mat-icon>
             </button>
         </div>
-        <h2>Course <br> Description</h2>
+        <h2>Course Description</h2>
     </div>
     <div class="icon-pack">
         <div class="icon-border">
@@ -43,7 +49,7 @@
                 <mat-icon>list</mat-icon>
             </button>
         </div>
-        <h2>Required <br> Textbooks</h2>
+        <h2>Required Textbooks</h2>
     </div>
     <div class="icon-pack">
         <div class="icon-border">
@@ -51,7 +57,7 @@
                 <mat-icon>person</mat-icon>
             </button>
         </div>
-        <h2>Connect with  <br> Alumni</h2>
+        <h2>Connect with Alumni</h2>
     </div>
     <div class="icon-pack">
         <div class="icon-border">
@@ -59,7 +65,7 @@
                 <mat-icon>rate_review</mat-icon>
             </button>
         </div>
-        <h2>Course <br> Reviews</h2>
+        <h2>Course Reviews</h2>
     </div>
 </div>
 
